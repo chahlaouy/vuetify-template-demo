@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
   	<div>
-      	<v-subheader>service 4 page</v-subheader>
+      	<v-subheader>Bloc Operation Chirurgie</v-subheader>
   	</div>
 </template>
 

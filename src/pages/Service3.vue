@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
   	<div>
-      	<v-subheader>service 3 page</v-subheader>
+      	<v-subheader>Laboratoire Histopathologie</v-subheader>
   	</div>
 </template>
 

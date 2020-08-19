@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
   	<div>
-      	<v-subheader>Service Radiologie</v-subheader>
+      	<v-subheader>Service Oncologie</v-subheader>
   	</div>
 </template>
 

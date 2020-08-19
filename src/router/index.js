@@ -7,6 +7,7 @@ import Service1 from '../pages/Service1';
 import Service2 from '../pages/Service2';
 import Service3 from '../pages/Service3';
 import Service4 from '../pages/Service4';
+import Service5 from '../pages/Service5';
 
 Vue.use(VueRouter)
 
@@ -24,29 +25,35 @@ let routes = [
 
         },
         {
-            path: 'service-1',
-            name: 'service-1',
+            path: 'service-medecine',
+            name: 'service-medecine',
             component: Service1,
 
         },
 
         {
-            path: 'service-2',
-            name: 'service-2',
+            path: 'service-radiologie',
+            name: 'service-radiologie',
             component: Service2,
 
         },
 
         {
-            path: 'service-3',
-            name: 'service-3',
+            path: 'laboratoire-histopathologie',
+            name: 'laboratoire-histopathologie',
             component: Service3,
 
         },
         {
-            path: 'service-4',
-            name: 'service-4',
+            path: 'operation-chirurgie',
+            name: 'operation-chirurgie',
             component: Service4,
+
+        },
+        {
+            path: 'service-oncologie',
+            name: 'service-oncologie',
+            component: Service5,
 
         }
     ]

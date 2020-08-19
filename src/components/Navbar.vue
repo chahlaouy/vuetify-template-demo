@@ -33,7 +33,7 @@
                         Hospital App
                     </v-list-item-title>
                     <v-list-item-subtitle>
-                        subtext
+                        realise par limem marwa
                     </v-list-item-subtitle>
                 </v-list-item-content>
             </v-list-item>
@@ -73,10 +73,11 @@ export default {
             drawer: false,
             links:[
                 {title: "Dashboard", link: "/dashboard", icon:"dashboard"},
-                {title: "service 1", link: "/service-1", icon:"line_weight"},
-                {title: "service 2", link: "/service-2", icon:"tab"},
-                {title: "service 3", link: "/service-3", icon:"toc"},
-                {title: "service 4", link: "/service-4", icon:"view_agenda"}
+                {title: "Service Medecine", link: "/service-medecine", icon:"line_weight"},
+                {title: "Service Radiologie", link: "/service-radiologie", icon:"tab"},
+                {title: "Laboratoire Histopathologie", link: "/laboratoire-histopathologie", icon:"toc"},
+                {title: "Bloc Operation Chirurgie", link: "/operation-chirurgie", icon:"view_agenda"},
+                {title: "Service Oncologie", link: "/service-oncologie", icon:"view_agenda"}
             ]
         }
     },

@@ -1,17 +1,30 @@
 <!-- eslint-disable -->
 <template>
     <div>
-        <v-subheader>service 1 page</v-subheader>
+        <v-subheader>Service Medecine</v-subheader>
         <v-container class="mt-5">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde, reprehenderit molestiae praesentium possimus aliquid! Voluptate incidunt voluptatibus, voluptatum aspernatur voluptates laborum omnis sit quis, nam tenetur fuga, exercitationem provident?</p>
-      </v-container>
+
+
+       
+        </v-container>
     </div>
 </template>
 
 <script>
 /* eslint-disable */
 export default {
+    data(){
+        return{
+            listePatients:[
+                {
+                    name:{
+                        title: 'Nom',
 
+                    }
+                }
+            ]
+        }
+    }
 }
 </script>
 
