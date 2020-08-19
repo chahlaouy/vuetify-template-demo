@@ -91,7 +91,7 @@ export default {
                     title: 'id',
                     value: ''
                 },
-                docter:{
+                doctor:{
                     label: 'Medecin traitant',
                     title: 'doctor',
                     value: ''

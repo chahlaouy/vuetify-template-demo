@@ -6,7 +6,7 @@
         <v-container class="mt-12">
             <v-row>
                 <v-col cols="6">
-                    <dialog-radio :patient="patient" :radio="radio"></dialog-radio>
+                    <dialog-radio :p="patient" :rad="radio" :dialog="dialog"></dialog-radio>
                 </v-col>
             </v-row>
             <v-row v-for="patient in listPatient" :key="patient.folder.value" class="white border-left-indigo my-2">
@@ -43,7 +43,7 @@
                         Compte Rendu d'examen radiologie
                     </div>
                     <div>
-                        <v-btn fab dark color="indigo" small class="my-3" elevation="0" @click.stop="passData(patient)">
+                        <v-btn fab dark color="indigo" small class="my-3" elevation="0" @click.stop="passData(patient), toggleDialog()" >
 							<v-icon dark>mdi-plus</v-icon>
 						</v-btn>
                     </div>
@@ -63,7 +63,39 @@ export default {
     data(){
 		return{
 			listPatients:[],
-			patient: null,
+			patient:{
+                name:{
+                    label: 'Nom et prénom',
+                    title: 'name',
+                    value: ''
+                },
+                age:{
+                    label: 'Age',
+                    title: 'age',
+                    value: ''
+                },
+                gender:{
+                    label: 'Sex',
+                    title: 'gender',
+                    value: ['Homme', 'Femme', 'Autre']
+                },
+                date:{
+                    label: 'Date',
+                    title: 'date',
+                    value: ''
+                },
+                folder:{
+                    label: 'Num dossier',
+                    title: 'folder',
+                    value: ''
+                },
+                id:{
+                    label: 'Identifiant',
+                    title: 'id',
+                    value: ''
+                }, 
+            },
+			dialog: false,
             radio:{
                 clinicalRens:{
                     label: 'Renseignement clinique',
@@ -78,7 +110,7 @@ export default {
                 resultat:{
                     label: 'Resultat',
                     title: 'resultat',
-                    value: ['Homme', 'Femme', 'Autre']
+                    value: ''
                 },
                 diagnostic:{
                     label: 'Diagnostic',
@@ -91,6 +123,9 @@ export default {
 	methods: {
 		passData(p){
 			this.patient = p
+		},
+		toggleDialog(){
+			this.dialog = true
 		}
 	},
     computed:{

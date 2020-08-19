@@ -23,7 +23,33 @@
                             </v-col>
                             <v-col cols="2"></v-col>
                             <v-col cols="5">
-                                <v-text-field :label="patient.date.label" prepend-icon="description" color="success"></v-text-field>
+                                <v-menu
+                                    ref="menu"
+                                    v-model="menu"
+                                    :close-on-content-click="false"
+                                    :return-value.sync="date"
+                                    transition="scale-transition"
+                                    offset-y
+                                    min-width="290px"
+                                >
+                                    <template v-slot:activator="{ on, attrs }">
+                                    <v-text-field
+                                        v-model="patient.date.value"
+                                        :label="patient.date.label"
+                                        prepend-icon="event"
+                                        readonly
+                                        v-bind="attrs"
+                                        v-on="on"
+                                    ></v-text-field>
+                                    </template>
+                                    <v-date-picker v-model="patient.date.value" scrollable color="green">
+                                    <v-spacer></v-spacer>
+                                    <v-btn text color="primary" @click="menu = false">Cancel</v-btn>
+                                    <v-btn text color="primary" @click="$refs.menu.save(date)">OK</v-btn>
+                                    </v-date-picker>
+                                </v-menu>
+
+                                
                             </v-col>
         
                             <v-col cols="5">
@@ -47,7 +73,11 @@
                                 <v-text-field :label="patient.id.label" prepend-icon="description" color="success"></v-text-field>
                             </v-col>
                         </v-row>
-                        
+                        <v-row>
+                            <v-col cols="12">
+                                <v-text-field :label="patient.doctor.label" prepend-icon="description" color="success"></v-text-field>
+                            </v-col>
+                        </v-row>
                         <v-row>
                             <v-col cols="12">
                                 <v-textarea :label="patient.antPatient.label" prepend-icon="description" color="success"></v-textarea>
@@ -98,6 +128,8 @@ export default {
     data(){
         return {
             dialog: false,
+            date: new Date().toISOString().substr(0, 10),
+            menu: false,
         }
     }
 }

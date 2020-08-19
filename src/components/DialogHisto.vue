@@ -7,9 +7,11 @@
                     Compte rendu
                 </v-card-title>
                 <v-card-subtitle>
-                    Service radiologie
+                    Service Histopathologie
                 </v-card-subtitle>
+
                 <v-divider></v-divider>
+
                 <v-card-text>
                     <v-form class="px-3">
                         <v-row>
@@ -40,12 +42,12 @@
                         </v-row>
                         <v-row>
                             <v-col cols="12">
-                                <v-text-field label="Service demandeur" value="service medecine enfant et adulte" prepend-icon="description" color="success" disabled></v-text-field>
+                                <v-text-field label="Service demandeur" value="service radiologie" prepend-icon="description" color="success" disabled></v-text-field>
                             </v-col>
                         </v-row>
                         <v-row>
                             <v-col cols="12">
-                                <v-textarea :label="radio.clinicalRens.label" prepend-icon="description" color="success"></v-textarea>
+                                <v-textarea :label="radio.prevName.label" prepend-icon="description" color="success"></v-textarea>
                             </v-col>
                         </v-row>
                         
@@ -63,7 +65,7 @@
                         
                         <v-row>
                             <v-col cols="12">
-                                <v-textarea :label="radio.diagnostic.label" prepend-icon="description" color="success"></v-textarea>
+                                <v-textarea :label="radio.conclusion.label" prepend-icon="description" color="success"></v-textarea>
                             </v-col>
                         </v-row>
                     </v-form>
