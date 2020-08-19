@@ -5,7 +5,7 @@
         <v-container class="mt-12">
             <v-row>
                 <v-col cols="6">
-                    <Dialog />
+                    <Dialog :patient="patient"></Dialog>
                 </v-col>
             </v-row>
             <v-row v-for="patient in listPatient" :key="patient.folder.value" class="white border-left-indigo my-2">
@@ -74,7 +74,7 @@ export default {
                 gender:{
                     label: 'Sex',
                     title: 'gender',
-                    value: ''
+                    value: ['Homme', 'Femme', 'Autre']
                 },
                 date:{
                     label: 'Date',

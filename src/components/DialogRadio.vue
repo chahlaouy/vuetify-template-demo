@@ -3,15 +3,16 @@
   	<div>
         <v-btn light elevation="0" @click.stop="dialog = true">
             <v-icon left>person</v-icon>
-            <span>Ajouter un patient</span>
+            <span> Compte Rendu d'examen radiologie </span>
         </v-btn>
-        <v-dialog max-width="800px" v-model="dialog" class="teal">
+        
+        <v-dialog max-width="800px" v-model="dialog">
             <v-card>
                 <v-card-title class="headline">
                     Compte rendu
                 </v-card-title>
                 <v-card-subtitle>
-                    Service enfant et adulte
+                    Service radiologie
                 </v-card-subtitle>
                 <v-divider></v-divider>
                 <v-card-text>
@@ -19,56 +20,51 @@
                         <v-row>
 
                             <v-col cols="5">
-                                <v-text-field :label="patient.name.label" prepend-icon="description" color="success"></v-text-field>
+                                <v-text-field :label="patient.name.label" v-model="patient.name.value" prepend-icon="description" color="success" disabled></v-text-field>
                             </v-col>
                             <v-col cols="2"></v-col>
                             <v-col cols="5">
-                                <v-text-field :label="patient.date.label" prepend-icon="description" color="success"></v-text-field>
+                                <v-text-field :label="patient.date.label" v-model="patient.date.value" prepend-icon="description" color="success" disabled></v-text-field>
                             </v-col>
         
                             <v-col cols="5">
-                                <v-text-field :label="patient.age.label" prepend-icon="description" color="success"></v-text-field>
+                                <v-text-field :label="patient.age.label" prepend-icon="description" color="success" v-model="patient.age.value" disabled></v-text-field>
                             </v-col>
                             <v-col cols="2"></v-col>
                             <v-col cols="5">
-                                <v-text-field :label="patient.folder.label" prepend-icon="description" color="success"></v-text-field>
+                                <v-text-field :label="patient.folder.label" prepend-icon="description" color="success" v-model="patient.folder.value" disabled></v-text-field>
                             </v-col>
 
                             <v-col cols="5">
-                                <v-select
-                                    :items="patient.gender.value"
-                                    :label="patient.gender.label"
-                                    solo
-                                >
-                                </v-select>
+                                <v-text-field :label="patient.gender.label" v-model="patient.gender.value" prepend-icon="description" color="success" disabled></v-text-field>
                             </v-col>
                             <v-col cols="2"></v-col>    
                             <v-col cols="5">
-                                <v-text-field :label="patient.id.label" prepend-icon="description" color="success"></v-text-field>
+                                <v-text-field :label="patient.id.label" prepend-icon="description" color="success" v-model="patient.id.value" disabled></v-text-field>
                             </v-col>
                         </v-row>
                         
                         <v-row>
                             <v-col cols="12">
-                                <v-textarea :label="patient.antPatient.label" prepend-icon="description" color="success"></v-textarea>
+                                <v-textarea :label="radio.clinicalRens.label" prepend-icon="description" color="success"></v-textarea>
                             </v-col>
                         </v-row>
                         
                         <v-row>
                             <v-col cols="12">
-                                <v-textarea :label="patient.physiqueSymp.label" prepend-icon="description" color="success"></v-textarea>
+                                <v-textarea :label="radio.technique.label" prepend-icon="description" color="success"></v-textarea>
                             </v-col>
                         </v-row>
                         
                         <v-row>
                             <v-col cols="12">
-                                <v-textarea :label="patient.deseaseHistory.label" prepend-icon="description" color="success"></v-textarea>
+                                <v-textarea :label="radio.resultat.label" prepend-icon="description" color="success"></v-textarea>
                             </v-col>
                         </v-row>
                         
                         <v-row>
                             <v-col cols="12">
-                                <v-textarea :label="patient.traitement.label" prepend-icon="description" color="success"></v-textarea>
+                                <v-textarea :label="radio.diagnostic.label" prepend-icon="description" color="success"></v-textarea>
                             </v-col>
                         </v-row>
                     </v-form>
@@ -93,7 +89,11 @@ export default {
         patient: {
             type: Object,
             required: true
-        }
+        },
+        radio: {
+            type: Object,
+            required: true
+        },
     },
     data(){
         return {
