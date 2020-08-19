@@ -24,7 +24,7 @@
             app
             color="indigo accent-4"
             expand-on-hover
-            mini-variant="true"
+            mini-variant
             mini-variant-width="56px"
         >
             <v-list-item class="mt-8">
