@@ -97,7 +97,7 @@ export default {
 			dialog: false,
             histo:{
                 prevName:{
-                    label: 'Nom du prélevant',
+                    label: 'Nom du prélevement',
                     title: 'prevName',
                     value: ''
                 },

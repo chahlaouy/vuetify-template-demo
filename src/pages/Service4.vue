@@ -1,7 +1,7 @@
 <!-- eslint-disable -->
 <template>
   	<div>
-      	<v-subheader>Bloc Operation Chirurgie</v-subheader>
+      	<v-subheader>Bloc traumatologie et chirurgie orthopédique </v-subheader>
   	</div>
 </template>
 

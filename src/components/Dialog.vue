@@ -110,6 +110,12 @@
                         </v-icon>
                         <span>Confimer</span>
                     </v-btn>
+                        <v-select
+                            :items="items"
+                            label="destinataire"
+                            solo
+                        >
+                        </v-select>
                 </v-card-actions>
             </v-card>
         </v-dialog>
@@ -130,6 +136,7 @@ export default {
             dialog: false,
             date: new Date().toISOString().substr(0, 10),
             menu: false,
+            items: ['service radio', 'service histo', 'service oncolo']
         }
     }
 }

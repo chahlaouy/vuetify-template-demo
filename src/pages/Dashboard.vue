@@ -30,11 +30,13 @@ export default {
 	data(){
 		return {
 			listServices: [
-				{name: 'Service Medecine Enfant Adulte', description: 'Service Medecine Enfant Adulte', color:"#385F73", link: "/service-medecine"},
+				{name: 'Service orthopédie enfant et adulte', description: 'Service orthopédie enfant et adulte', color:"#385F73", link: "/service-medecine"},
 				{name: 'Service Radiologie', description: 'Service Radiologie', color:"#e91f63", link:"/service-radiologie"},
 				{name: 'Laboratoire Histopathologie', description: 'Laboratoire Histopathologie', color:"#1f7086", link: "/laboratoire-histopathologie"},
-				{name: 'Bloc operation Chirurgie', description: 'Bloc operation Chrirugie', color:"#952174", link: "/operation-chirurgie"},
-				{name: 'Service Oncologie', description: 'Service Oncologie', color:"#28c6da", link: "/service-oncologie"}
+				{name: 'Bloc traumatologie et chirurgie orthopédique', description: 'Bloc traumatologie et chirurgie orthopédique', color:"#952174", link: "/operation-chirurgie"},
+				{name: 'Service Oncologie', description: 'Service Oncologie', color:"#28c6da", link: "/service-oncologie"},
+				{name: "Service d'hématologie et greffe ", description: "Service d'hématologie et greffe de la moelle osseuse", color:"#e2bedf", link: "/service-oncologie"},
+				{name: 'Service hospitalisation', description: 'Service hospitalisation', color:"#28c6da", link: "/service-oncologie"}
 			]
 		}
 	}
